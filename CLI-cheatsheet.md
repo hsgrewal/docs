@@ -1,10 +1,10 @@
 # Common CLI Commands
 
-- >
+- \>
   - takes the standard output of the command on the left, and redirects it to
     the file on the right
 
-- >>
+- \>\>
   - takes the standard output of the command on the left and appends it to the
     file on the right
 
@@ -17,9 +17,9 @@
     as standard input to the command on the right. aka command to command
     redirection
 
-- ~/.bash_profile - file use to store environment settings. It loads the
-    the contents of the bash profile before executing commands when a
-    session starts
+- ~/.bash_profile
+  - file use to store environment settings. It loads the the contents of the
+    bash profile before executing commands when a session starts
 
 - alias
   - allows you to create keyboard shortcuts, or aliases, for command used
@@ -78,7 +78,7 @@
 - ls -l
   - lists all contents of a directory in long formant
 
-ls -t
+- ls -t
   - orders files and directories by the time they were last modified
 
 - mkdir
@@ -118,5 +118,6 @@ ls -t
     name as an argument, and then creates a new empty file in the current
     working directory
 
-- uniq - takes a filename or standard input and prints out every line, removing
+- uniq
+  - takes a filename or standard input and prints out every line, removing
     any exact duplicates
