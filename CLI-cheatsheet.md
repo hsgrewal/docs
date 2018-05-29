@@ -1,49 +1,57 @@
 # Common CLI Commands
 
-- \>
-  - takes the standard output of the command on the left, and redirects it to
-    the file on the right
+### `\>`
+Takes the standard output of the command on the left, and redirects it to the
+ file on the right
 
-- \>\>
-  - takes the standard output of the command on the left and appends it to the
-    file on the right
+### `\>\>`
+Takes the standard output of the command on the left and appends it to the
+file on the right
 
-- <
-  - takes the standard input from the file on the right and inputs it into the
-    program on the left
+### `<`
+Takes the standard input from the file on the right and inputs it into the
+program on the left
 
-- |
-  - "pipe" takes the standard output of the command on the left, and pipes it
-    as standard input to the command on the right. aka command to command
-    redirection
+### `|`
+"pipe" takes the standard output of the command on the left, and pipes it
+as standard input to the command on the right. aka command to command
+redirection
 
-- ~/.bash_profile
-  - file use to store environment settings. It loads the the contents of the
-    bash profile before executing commands when a session starts
+### wildcards (`\*`)
+Selects all the files in the current directory
 
-- alias
-  - allows you to create keyboard shortcuts, or aliases, for command used
-    commands
+### `~/.bash_profile`
+File used to store environment settings. It loads the the contents of the bash
+profile before executing commands when a session starts
 
-- cd
-  - takes a directory name as an argument, and switches into that directory.
-    Use directory's path as an argument to navigate directory
+### `alias`
+Allows you to create keyboard shortcuts, or aliases, for command used commands
 
-- cd ..
-  - to move up one directory
+### `cat`
+Concatenate and print files
 
-- cp
-  - copies files or directories
+#### `-n`
+Number lines
 
-- wildcards (\*)
-  - selects all the files in the current directory
+### `cd`
+Takes a directory name as an argument, and switches into that directory. Use
+directory's path as an argument to navigate directory
 
-- env
-  - "environment", and returns a list of the environment variables for the
-    current user
+#### `cd ..`
+Move up one directory
 
-- env | grep VARIABLE
-  - displays the value of a single environment variable
+#### `cd -`
+Jump to previous directory
+
+### `cp`
+Copies files or directories
+
+### `env`
+"environment", and returns a list of the environment variables for the current
+user
+
+#### `env | grep VARIABLE`
+Displays the value of a single environment variable
 
 - export
   - makes the variable to be available to all child sessions initiated from the
@@ -68,18 +76,27 @@
   - variable is an environment variable that displays the path of the home
     directory
 
-- ls
-  - lists all files and directories in the working directory
+### `head`
+Print first 10 lines of file
 
-- ls -a
-  - lists all contents in the working directory, including hidden files and
-    directories
+#### `-n N`
+Specify number of lines
 
-- ls -l
-  - lists all contents of a directory in long formant
+### `less`
+Preview files and move around
 
-- ls -t
-  - orders files and directories by the time they were last modified
+### `ls`
+Lists all files and directories in the working directory
+
+#### `-a`
+Lists all contents in the working directory, including hidden files and
+directories
+
+#### `-l`
+Lists all contents of a directory in long format
+
+#### `-t`
+Orders files and directories by the time they were last modified
 
 - mkdir
   - takes in a directory name as an argument, and then creates a new
@@ -113,6 +130,12 @@
   - takes a filename or standard input and orders each line alphabetically,
     printing it to standard output
 
+### `tail`
+Print last 10 lines of file
+
+#### `-n N`
+Specify the number of lines
+
 - touch
   - creates a new file inside the working directory. It takes in a file
     name as an argument, and then creates a new empty file in the current
@@ -121,3 +144,6 @@
 - uniq
   - takes a filename or standard input and prints out every line, removing
     any exact duplicates
+
+### `wc`
+word count
