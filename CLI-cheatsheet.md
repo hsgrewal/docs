@@ -128,15 +128,20 @@ Orders files and directories by the time they were last modified
 - pwd
   - prints the name of the working directory
 
+### Redirection
+`stdin` - 0
+`stdout` - 1 (Default)
+`stderr` - 2
+
 - rm
   - deletes files
 
 - rm -r
   - deletes a directory and all of its child directories
 
-- sed
-  - "stream editor" accepts standard input and modifies it based on an
-    expression, before displaying it as output data
+### `sed`
+"stream editor" accepts standard input and modifies it based on an expression,
+before displaying it as output data
 
 ### `sort`
 Takes a filename or standard input and orders each line alphabetically,
@@ -148,6 +153,15 @@ Print last 10 lines of file
 ##### `-n N`
 Specify the number of lines
 
+### `tar`
+Create archives
+`tar -cvf <name>.tar <Files>` - No compression
+`tar -caf <name>.tar.gz <Files>` - GZ compression
+
+Extract files
+`tar -xf <archive>`
+`tar -xf <archive> -C <destination>`
+
 ### `touch`
 Creates a new file inside the working directory. It takes in a file name as
 an argument, and then creates a new empty file in the current working directory
@@ -158,3 +172,15 @@ exact duplicates
 
 ### `wc`
 Word count
+
+
+## Commands to explore
+### `awk`
+`awk '{print $2}'` - Print second column
+
+### `sed`
+
+- sort
+- rev
+- tac
+- tr
