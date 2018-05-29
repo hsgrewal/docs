@@ -166,6 +166,9 @@ Extract files
 Creates a new file inside the working directory. It takes in a file name as
 an argument, and then creates a new empty file in the current working directory
 
+### `tree`
+Display files and directories using tree structure
+
 ### `uniq`
 Takes a filename or standard input and prints out every line, removing any
 exact duplicates
