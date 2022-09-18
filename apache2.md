@@ -42,7 +42,23 @@ domain name from [Freenom](https://www.freenom.com/en/index.html?lang=en).
 Use Cloudflare to protect traffic to your domain. Setup your domain to use
 Cloudflare namespace servers. Add DNS to your Server's public IP address.
 
+## Configure Website & Domain with Apache2
+1. `cd /var/www && sudo mkdir <DOMAINNAME>`
+2. Copy source code of site to `/var/www/<DOMAINNAME>` directory
+3. Create a config file for site
+    1. `cd /etc/apache2/sites-available`
+    2. `sudo cp 000-default.conf <DOMAINNAME>.conf`
+    3. Edit `<DOMAINNAME>.conf` file with `sudo vi <DOMAINNAME>.conf`
+        - Change `ServerName` to domain name
+        - Add `ServerAlias` to any alias for domain (e.g. www.domain.com)
+        - Change `ServerAdmin` to your email address
+        - Change `DocumentRoot` to `/var/www/<DOMAINNAME>`
+    4. Write and save file
+4. Enable new site: `sudo a2ensite <DOMAINNAME>.conf`
+5. Reload Apache2: `sudo systemctl reload apache2`
+
 ## Resources
 1. [Apache2 & Port Forwarding](https://www.youtube.com/watch?v=KvLj-TNXFDs)
 2. [Domain Name](https://youtu.be/gsvS2M5knOw?t=226)
 3. [Cloudflare](https://youtu.be/gsvS2M5knOw?t=294)
+4. [Add site to Apache](https://youtu.be/6Guk-lv7QJQ)
